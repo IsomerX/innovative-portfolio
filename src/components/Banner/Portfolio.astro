@@ -1,0 +1,29 @@
+<div class="flex space-x-8 text-9xl font-extrabold">
+    <h3 class="mx-auto banner_line">
+        <div class="flex items-end space-x-7">
+            <img src="/assets/angel.png" class="h-[6rem]" />
+            <span>PORTFOLIO</span>
+        </div>
+    </h3>
+</div>
+
+<style>
+    h3::before,
+    h3::after {
+        content: "PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO";
+    }
+    @keyframes floating {
+        0% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+        50% {
+            transform: translate(0, 15px) rotate(15deg);
+        }
+        100% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+    }
+    img {
+        animation: floating 5s ease-in-out infinite;
+    }
+</style>

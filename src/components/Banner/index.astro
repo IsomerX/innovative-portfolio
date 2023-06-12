@@ -1,0 +1,39 @@
+---
+import Portfolio from "./Portfolio.astro";
+import Store from "./Store.astro";
+import SEO from "./Seo.astro";
+---
+
+<div class="relative space-y-1 mt-40">
+    <Store />
+    <Portfolio />
+    <SEO />
+</div>
+
+<style is:global>
+    /* make a variable for the lineheight */
+    :root {
+        --lineheight: 8rem;
+    }
+    .banner_line::before,
+    .banner_line::after {
+        color: transparent;
+        -webkit-text-stroke: 0.1rem;
+        -webkit-text-stroke-color: #d5d5d5;
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+    }
+    .banner_line::after {
+        left: 100%;
+    }
+    .banner_line::before {
+        right: 100%;
+    }
+    .banner_line {
+        position: relative;
+        padding: 0 2rem;
+        line-height: var(--lineheight);
+        @apply text-zinc-800;
+    }
+</style>

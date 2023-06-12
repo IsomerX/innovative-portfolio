@@ -1,0 +1,49 @@
+<div class="flex space-x-8 text-9xl font-extrabold">
+    <h3 class="translate-x-[10vw] banner_line" id="store">
+        <div class="flex items-end space-x-7">
+            <span>STORE</span>
+            <img src="/assets/basketball.png" class="h-[6rem]" />
+        </div>
+    </h3>
+</div>
+
+<script>
+    const bannerLine = document.getElementById("store");
+    let scrollPos = window.scrollY;
+    let currentPos = 0;
+
+    window.addEventListener("scroll", () => {
+        const newScrollPos = window.scrollY;
+        const scrollDelta = newScrollPos - scrollPos;
+        currentPos += scrollDelta;
+        if (!bannerLine) return;
+
+        bannerLine.style.transform = `translateX(calc(10vw - ${
+            currentPos / 3
+        }px))`;
+
+        scrollPos = newScrollPos;
+    });
+</script>
+
+<style>
+    h3::before,
+    h3::after {
+        content: "STORE STORE STORE STORE STORE STORE STORE STORE STORE STORE STORE";
+    }
+    @keyframes floating {
+        0% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+        50% {
+            transform: translate(0, 15px) rotate(3deg);
+        }
+        100% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+    }
+    /* apply animation to the image */
+    img {
+        animation: floating 4s ease-in-out infinite;
+    }
+</style>

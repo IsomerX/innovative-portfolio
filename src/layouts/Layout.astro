@@ -10,7 +10,10 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta
+			name="description"
+			content="Dhruv Bakshi Portfolio Site. Dhruv Bakshi is a fullstack developer with 3+ years of experience in developing stunning websites for his clients. Let him help you make a great online presence."
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -21,16 +24,50 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-Regular.woff") format("woff");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-Medium.woff") format("woff");
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-DemiBoldOblique.woff") format("woff");
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-BoldOblique.woff") format("woff");
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-ExtraBold.woff") format("woff");
+		font-weight: 800;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: "Integral";
+		src: url("/fonts/IntegralCF-Heavy.woff") format("woff");
+		font-weight: 900;
+		font-style: normal;
+		font-display: swap;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: "Integral", sans-serif;
+		height: 2000px;
 	}
 </style>
