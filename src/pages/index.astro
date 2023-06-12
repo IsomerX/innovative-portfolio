@@ -20,7 +20,7 @@ import Banner from "../components/Banner/index.astro";
 		var slowScroll = scrollTop / 2;
 
 		// Apply the scroll position to the content element
-		document.getElementById("content").style.transform =
+		document.getElementById("content")!.style.transform =
 			"translateY(" + slowScroll + "px)";
 	});
 </script>

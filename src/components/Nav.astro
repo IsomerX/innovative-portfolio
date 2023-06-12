@@ -1,0 +1,40 @@
+<div class="flex justify-between items-center p-10">
+    <div class="text-xl font-bold">DHRUV BAKSHI</div>
+    <div
+        class="font-robo flex space-x-10 text-lg font-light text-gray-700 items-center"
+    >
+        <span>Features</span>
+        <span>Projects</span>
+        <span>Pricing</span>
+        <button
+            class="font-sans font-extrabold bg-red-500 py-2 px-5 text-white leading-snug rounded-full"
+            >LET'S CHAT?</button
+        >
+    </div>
+</div>
+
+<style>
+    button {
+        position: relative;
+        overflow: hidden;
+    }
+
+    button::after {
+        content: "Let's Chat?";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+        background: orange;
+        @apply rounded-full flex items-center justify-center;
+    }
+
+    button:hover:after {
+        width: 100%;
+        opacity: 1;
+    }
+</style>
