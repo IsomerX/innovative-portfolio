@@ -6,6 +6,7 @@ module.exports = {
             fontFamily: {
                 sans: ["Integral", "sans-serif"],
                 robo: ["Roboto Slab", "serif"],
+                dance: ["Dancing Script", "cursive"],
             },
         },
     },

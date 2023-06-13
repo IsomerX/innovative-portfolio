@@ -1,0 +1,47 @@
+---
+import DoubleHeading from "../DoubleHeading.astro";
+---
+
+<div class="flex justify-center flex-col items-center text-center space-y-16">
+    <DoubleHeading>Building Digital Experiences</DoubleHeading>
+    <p class="max-w-[60%] font-robo text-[#2B2B2B] text-xl font-light">
+        I specialize in crafting conversion optimised websites on WordPress and
+        Shopify. At the core, I am fueled by passion and innovation. I've been
+        designing websites from 8 years and have developed numerous websites
+        that reflect my commitment to excellence. Whether you're looking for a
+        stunning ecommerce website that generates profit or a responsive website
+        or portfolio, I have the skills to bring your Vision to Life. Let's
+        start the journey to transform your ideas into Remarkable Digital
+        Experiences.
+    </p>
+    <button
+        class="font-sans font-extrabold bg-red-500 py-3 px-6 text-white leading-snug text-xl rounded-full"
+        >LET'S BUILD YOUR EXPERIENCE</button
+    >
+</div>
+
+<style>
+    button {
+        position: relative;
+        overflow: hidden;
+    }
+
+    button::after {
+        content: "CHAT WITH ME!";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        z-index: 2;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+        background: orange;
+        @apply rounded-full flex items-center justify-center;
+    }
+
+    button:hover:after {
+        width: 100%;
+        opacity: 1;
+    }
+</style>
