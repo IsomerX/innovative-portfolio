@@ -1,1 +1,71 @@
-<div>hellos</div>
+---
+const projects = [
+    {
+        image: "/assets/projects/stride_ventures.png",
+        tags: ["Portfolio", "Venture Capital", "Investment"],
+    },
+    {
+        image: "/assets/projects/star_atlas.png",
+        tags: ["Dashboard", "Gaming", "NFT"],
+    },
+    {
+        image: "/assets/projects/ditto_doll.png",
+        tags: ["E-commerce", "Design"],
+    },
+    {
+        image: "/assets/projects/urvi_suhane.png",
+        tags: ["Portfolio"],
+    },
+];
+---
+
+<div class="w-4/5 mx-auto grid grid-cols-2 py-10 gap-12">
+    <div class="flex flex-col space-y-12">
+        <div class="pb-10">
+            <h3 class="font-extrabold text-5xl text-zinc-800">
+                Shall I show you <br /> what i do?
+            </h3>
+            <p class="font-robo mt-2 text-xl font-extralight">
+                Here are some of my latest projects
+            </p>
+        </div>
+        <img
+            src="/assets/projects/stride_ventures.png"
+            class="rounded-md shadow-lg"
+        />
+        <img
+            src="/assets/projects/star_atlas.png"
+            class="rounded-md shadow-lg"
+        />
+    </div>
+    <div class="flex flex-col space-y-12">
+        <img
+            src="/assets/projects/ditto_doll.png"
+            class="rounded-md shadow-lg"
+        />
+        <img
+            src="/assets/projects/urvi_suhane.png"
+            class="rounded-md shadow-lg"
+        />
+        <div class="text-right flex flex-col items-end">
+            <h3 class="font-extrabold text-5xl text-zinc-800">
+                wanna see <br /> them all?
+            </h3>
+            <div class="rotate-90 mr-40 scale-75 w-fit">
+                <svg
+                    width="72"
+                    height="124"
+                    viewBox="0 0 72 124"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.18033 0.976109C0.54755 1.80359 0.705387 2.98737 1.53287 3.62016C12.1745 11.7579 24.6994 21.8183 35.9947 39.0708C46.7103 55.4377 56.3817 78.3784 62.1506 112.431L55.7289 104.082C55.0938 103.257 53.9096 103.102 53.0839 103.737C52.2582 104.373 52.1038 105.557 52.7389 106.382L65.3092 122.724C65.3162 122.733 65.3233 122.742 65.3305 122.751C65.4917 122.955 65.6868 123.116 65.9015 123.234C66.1233 123.355 66.3734 123.434 66.6414 123.458C66.6758 123.461 66.7103 123.463 66.7448 123.464C66.8132 123.467 66.8818 123.465 66.9502 123.46C67.063 123.452 67.1754 123.433 67.2861 123.404C67.5232 123.343 67.752 123.233 67.9584 123.074C67.975 123.061 67.9915 123.048 68.0077 123.035C68.1945 122.881 68.3445 122.699 68.456 122.498C68.5832 122.271 68.665 122.013 68.6881 121.736L71.2029 91.5572C71.2895 90.5191 70.518 89.6074 69.4799 89.5209C68.4418 89.4344 67.5301 90.2058 67.4436 91.2439L65.7764 111.251C59.9255 77.0809 50.1407 53.7904 39.1508 37.0045C27.4978 19.2057 14.5593 8.83262 3.82438 0.62357C2.9969 -0.00921282 1.81311 0.148624 1.18033 0.976109Z"
+                        fill="#222222"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
