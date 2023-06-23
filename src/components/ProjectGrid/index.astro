@@ -3,23 +3,27 @@ const projects = [
     {
         image: "/assets/projects/stride_ventures.png",
         tags: ["Portfolio", "Venture Capital", "Investment"],
+        link: "https://strideventures.in",
     },
     {
         image: "/assets/projects/star_atlas.png",
         tags: ["Dashboard", "Gaming", "NFT"],
+        link: "https://explorer.staratlas.club/home",
     },
     {
         image: "/assets/projects/ditto_doll.png",
         tags: ["E-commerce", "Design"],
+        link: "https://www.mydittodoll.com",
     },
     {
         image: "/assets/projects/urvi_suhane.png",
         tags: ["Portfolio"],
+        link: "https://urvisuhane.vercel.app",
     },
 ];
 ---
 
-<div class="w-4/5 mx-auto grid grid-cols-2 py-10 gap-12">
+<div class="w-4/5 mx-auto grid grid-cols-2 pt-10 gap-12">
     <div class="flex flex-col space-y-12">
         <div class="pb-10">
             <h3 class="font-extrabold text-5xl text-zinc-800">
@@ -29,24 +33,35 @@ const projects = [
                 Here are some of my latest projects
             </p>
         </div>
-        <img
-            src="/assets/projects/stride_ventures.png"
-            class="rounded-md shadow-lg"
-        />
-        <img
-            src="/assets/projects/star_atlas.png"
-            class="rounded-md shadow-lg"
-        />
+        <a href={projects[0].link} target="_blank">
+            <img
+                src="/assets/projects/stride_ventures.png"
+                class="rounded-md shadow-lg"
+            />
+        </a>
+
+        <a href={projects[1].link} target="_blank">
+            <img
+                src="/assets/projects/star_atlas.png"
+                class="rounded-md shadow-lg"
+            />
+        </a>
     </div>
     <div class="flex flex-col space-y-12">
-        <img
-            src="/assets/projects/ditto_doll.png"
-            class="rounded-md shadow-lg"
-        />
-        <img
-            src="/assets/projects/urvi_suhane.png"
-            class="rounded-md shadow-lg"
-        />
+        <a href={projects[2].link} target="_blank">
+            <img
+                src="/assets/projects/ditto_doll.png"
+                class="rounded-md shadow-lg"
+            />
+        </a>
+
+        <a href={projects[3].link} target="_blank">
+            <img
+                src="/assets/projects/urvi_suhane.png"
+                class="rounded-md shadow-lg"
+            />
+        </a>
+
         <div class="text-right flex flex-col items-end">
             <h3 class="font-extrabold text-5xl text-zinc-800">
                 wanna see <br /> them all?

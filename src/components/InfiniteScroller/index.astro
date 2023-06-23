@@ -1,0 +1,50 @@
+<div class="w-screen relative h-[200px]">
+    <div class="w-full flex space-x-10 justify-around absolute" id="web1">
+        <div class="text-9xl font-extrabold text-zinc-900">WEBSITE</div>
+        <div class="text-9xl font-extrabold text-zinc-900">WEBSITE</div>
+        <div class="text-9xl font-extrabold text-zinc-900">WEBSITE</div>
+    </div>
+    <div class="w-full flex space-x-10 justify-around absolute" id="web2">
+        <div class="text-9xl font-extrabold text-red-600">WEBSITE</div>
+        <div class="text-9xl font-extrabold text-red-600">WEBSITE</div>
+        <div class="text-9xl font-extrabold text-red-600">WEBSITE</div>
+    </div>
+</div>
+
+<script>
+    const duration = 4000;
+
+    const web1 = document.getElementById("web1");
+    const web2 = document.getElementById("web2");
+    web1?.animate(
+        [
+            { transform: "translateX(-500)" },
+            { transform: "translateX(100px)" },
+            {
+                transform: "translateX(-500)",
+            },
+        ],
+        {
+            duration,
+            iterations: Infinity,
+            easing: "ease-in-out",
+            direction: "alternate",
+        }
+    );
+    web2?.animate(
+        [
+            { transform: "translateX(-500)" },
+            { transform: "translateX(100px)" },
+            {
+                transform: "translateX(-500)",
+            },
+        ],
+        {
+            duration,
+            iterations: Infinity,
+            easing: "ease-in-out",
+            direction: "alternate",
+            delay: 500,
+        }
+    );
+</script>
