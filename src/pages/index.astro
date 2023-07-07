@@ -6,6 +6,7 @@ import QualityTagline from "../components/QualityTagline/index.astro";
 import ProjectGrid from "../components/ProjectGrid/index.astro";
 import InfiniteScroller from "../components/InfiniteScroller/index.astro";
 import JoinTheFamily from "../components/JoinTheFamily.astro";
+import Footer from "../components/Footer/index.astro";
 ---
 
 <Layout title="Dhruv Bakshi - Fullstack | Frontend | Backend">
@@ -15,7 +16,9 @@ import JoinTheFamily from "../components/JoinTheFamily.astro";
 		<QualityTagline />
 		<ProjectGrid />
 		<InfiniteScroller />
+		<div class="h-[100px]"></div>
 		<JoinTheFamily />
+		<Footer />
 	</main>
 </Layout>
 
@@ -26,7 +29,7 @@ import JoinTheFamily from "../components/JoinTheFamily.astro";
 			window.pageYOffset || document.documentElement.scrollTop;
 
 		// Slow down the scroll speed
-		var slowScroll = scrollTop / 2;
+		var slowScroll = scrollTop / 20;
 
 		// Apply the scroll position to the content element
 		document.getElementById("content")!.style.transform =

@@ -1,0 +1,28 @@
+<div class="flex space-x-8 text-9xl font-extrabold">
+    <h3 class="left-56 banner_line">
+        <div class="flex items-end space-x-7">
+            <span>LET'S WORK</span>
+            <img src="/assets/star.png" class="h-[6rem]" />
+        </div>
+    </h3>
+</div>
+
+<style>
+    h3::before {
+        content: "LET'S WORK LET'S WORK LET'S WORKLET'S WORK";
+    }
+    @keyframes floating {
+        0% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+        50% {
+            transform: translate(0, 15px) rotate(15deg);
+        }
+        100% {
+            transform: translate(0, -5px) rotate(-1deg);
+        }
+    }
+    img {
+        animation: floating 5s ease-in-out infinite;
+    }
+</style>

@@ -1,0 +1,117 @@
+---
+import LetsConnect from "./LetsConnect.astro";
+import Together from "./Together.astro";
+---
+
+<div class="relative space-y-1 overflow-hidden mt-20">
+    <LetsConnect />
+    <Together />
+    <div
+        class="font-robo text-gray-600 font-light text-2xl flex flex-col pt-32 pb-20 w-4/5 mx-auto"
+    >
+        <!-- <img src="/assets/arrow.png" class="h-32 opacity-80" /> -->
+        <div id="banner_description">
+            <h3 class="text-red-700 underline">Contact Me</h3>
+            <br />
+            Let's chit chat about this and that <br />
+            also some about taking your business to the next level!
+        </div>
+        <form class="mt-20 space-y-10">
+            <div class="flex flex-col gap-3">
+                <label for="name"
+                    ><span class="text-6xl font-bold">Name</span></label
+                >
+                <input
+                    id="name"
+                    name="name"
+                    class="border-b-2 font-robo py-3"
+                />
+            </div>
+            <div class="flex flex-col gap-7">
+                <span class="text-6xl font-bold">
+                    What type of website are you looking for?
+                </span>
+                <div class="flex gap-5">
+                    <div class="flex justify-center items-center gap-3">
+                        <input
+                            id="ecommerce"
+                            name="eCommerce"
+                            type="checkbox"
+                            class="h-5 aspect-square"
+                        />
+                        <label for="ecommerce">eCommerce Website</label>
+                    </div>
+                    <div class="flex justify-center items-center gap-3">
+                        <input
+                            id="business"
+                            name="Business"
+                            type="checkbox"
+                            class="h-5 aspect-square"
+                        />
+                        <label for="business">Business</label>
+                    </div>
+                    <div class="flex justify-center items-center gap-3">
+                        <input
+                            id="portfolio"
+                            name="portfolio"
+                            type="checkbox"
+                            value="Portfolio"
+                            class="h-5 aspect-square"
+                        />
+                        <label for="portfolio">Portfolio</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div
+    class="mt-20 w-full bg-zinc-900 text-white py-5 font-mono flex justify-between"
+>
+    <div class="w-4/5 mx-auto flex justify-between">
+        <div>Dhruv Bakshi - Fullstack Developer - Full Time mad lad</div>
+        <div>Made with ❤️ in 2023</div>
+    </div>
+</div>
+
+<style is:global>
+    /* make a variable for the lineheight */
+    :root {
+        --lineheight: 8rem;
+    }
+    .banner_line::before,
+    .banner_line::after {
+        color: transparent;
+        -webkit-text-stroke: 0.15rem;
+        -webkit-text-stroke-color: #d5d5d57a;
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+        -webkit-transition: all 3s;
+        transition: all 0.5s;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .banner_line::after {
+        left: 100%;
+    }
+    .banner_line::before {
+        right: 100%;
+    }
+    .banner_line {
+        position: relative;
+        padding: 0 2rem;
+        line-height: var(--lineheight);
+        @apply text-zinc-800;
+    }
+    .banner_line:hover:before {
+        color: #e4e4e4;
+        -webkit-text-stroke: 0.1rem;
+        -webkit-text-stroke-color: #e4e4e4;
+    }
+    .banner_line:hover:after {
+        color: #e4e4e4;
+        -webkit-text-stroke: 0.1rem;
+        -webkit-text-stroke-color: #e4e4e4;
+    }
+</style>
