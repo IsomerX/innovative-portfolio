@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./cursor.css";
 import { useStore } from "@nanostores/react";
 import { isCursorHovering } from "./cursorContext";
@@ -9,12 +9,14 @@ const Cursor = () => {
     const [cursorScale, setCursorScale] = useState(1);
     const $isCursorHovering = useStore(isCursorHovering);
 
+    const cursor_r = useRef<HTMLDivElement>(null);
+
     const mouse = {
         x: useMotionValue(0),
         y: useMotionValue(0),
     };
 
-    const smoothOptions = { damping: 10, stiffness: 100, mass: 0.1 };
+    const smoothOptions = { damping: 10, stiffness: 500, mass: 0.3 };
 
     const smoothMouse = {
         x: useSpring(mouse.x, smoothOptions),
@@ -43,6 +45,27 @@ const Cursor = () => {
         }
     }, [$isCursorHovering]);
 
+    useEffect(() => {
+        if (window) {
+            const onCursorLeave = () => {
+                setCursorScale(0);
+                cursor_r.current?.classList.remove("cursor--entry");
+            };
+            const onCursorEnter = () => {
+                setCursorScale(1);
+                cursor_r.current?.classList.add("cursor--entry");
+            };
+
+            document.addEventListener("mouseleave", onCursorLeave);
+            document.addEventListener("mouseenter", onCursorEnter);
+
+            return () => {
+                document.removeEventListener("mouseleave", onCursorLeave);
+                document.removeEventListener("mouseenter", onCursorEnter);
+            };
+        }
+    }, []);
+
     return (
         <motion.div
             style={{
@@ -52,6 +75,7 @@ const Cursor = () => {
                 scale: cursorScale,
             }}
             className="cursor"
+            ref={cursor_r}
         ></motion.div>
     );
 };
