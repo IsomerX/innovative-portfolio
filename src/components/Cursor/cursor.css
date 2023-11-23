@@ -1,0 +1,20 @@
+.cursor {
+    position: fixed;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: white;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+    mix-blend-mode: difference;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}
+
+body {
+    cursor: none;
+}

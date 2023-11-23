@@ -33,32 +33,51 @@ const projects = [
                 Here are some of my latest projects
             </p>
         </div>
-        <a href={projects[0].link} target="_blank">
+        <a
+            href={projects[0].link}
+            target="_blank"
+            data-cursor-hover
+            class="overflow-hidden rounded-md hover:rounded-3xl transition-all duration-500"
+        >
             <img
                 src="/assets/projects/stride_ventures.png"
-                class="rounded-md shadow-lg"
+                class="shadow-lg hover:scale-110 transition-all duration-500"
             />
         </a>
 
-        <a href={projects[1].link} target="_blank">
+        <a
+            href={projects[1].link}
+            target="_blank"
+            data-cursor-hover
+            class="overflow-hidden rounded-md hover:rounded-3xl transition-all duration-500"
+        >
             <img
                 src="/assets/projects/star_atlas.png"
-                class="rounded-md shadow-lg"
+                class="shadow-lg hover:scale-110 transition-all duration-500"
             />
         </a>
     </div>
-    <div class="flex flex-col space-y-12">
-        <a href={projects[2].link} target="_blank">
+    <div class="flex flex-col space-y-12" data-cursor-hover>
+        <a
+            href={projects[2].link}
+            target="_blank"
+            class="overflow-hidden rounded-md hover:rounded-3xl transition-all duration-500"
+        >
             <img
                 src="/assets/projects/ditto_doll.png"
-                class="rounded-md shadow-lg"
+                class="shadow-lg hover:scale-110 transition-all duration-500"
             />
         </a>
 
-        <a href={projects[3].link} target="_blank">
+        <a
+            href={projects[3].link}
+            target="_blank"
+            data-cursor-hover
+            class="overflow-hidden rounded-md hover:rounded-3xl transition-all duration-500"
+        >
             <img
                 src="/assets/projects/urvi_suhane.png"
-                class="rounded-md shadow-lg"
+                class="shadow-lg hover:scale-110 transition-all duration-500"
             />
         </a>
 
