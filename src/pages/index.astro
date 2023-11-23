@@ -10,29 +10,20 @@ import Footer from "../components/Footer/index.astro";
 ---
 
 <Layout title="Dhruv Bakshi - Fullstack | Frontend | Backend">
-	<main id="content">
-		<Banner />
-		<DigitalExperience />
-		<QualityTagline />
-		<ProjectGrid />
-		<InfiniteScroller />
-		<div class="h-[100px]"></div>
-		<JoinTheFamily />
-		<Footer />
-	</main>
+    <main id="content">
+        <Banner />
+        <DigitalExperience />
+        <QualityTagline />
+        <ProjectGrid />
+        <InfiniteScroller />
+        <div class="h-[100px]"></div>
+        <JoinTheFamily />
+        <Footer />
+    </main>
 </Layout>
 
 <script>
-	window.addEventListener("scroll", function () {
-		// Get the current scroll position
-		var scrollTop =
-			window.pageYOffset || document.documentElement.scrollTop;
+    import LocomotiveScroll from "locomotive-scroll";
 
-		// Slow down the scroll speed
-		var slowScroll = scrollTop / 20;
-
-		// Apply the scroll position to the content element
-		document.getElementById("content")!.style.transform =
-			"translateY(" + slowScroll + "px)";
-	});
+    const scroll = new LocomotiveScroll();
 </script>
